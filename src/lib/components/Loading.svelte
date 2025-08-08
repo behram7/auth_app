@@ -1,0 +1,59 @@
+<script lang="ts">
+  export let size: 'small' | 'medium' | 'large' = 'medium';
+  export let text: string = 'Loading...';
+  export let showText: boolean = true;
+</script>
+
+<div class="loading-container">
+  <div class="spinner spinner-{size}"></div>
+  {#if showText}
+    <p class="loading-text">{text}</p>
+  {/if}
+</div>
+
+<style>
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .spinner-small {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+  }
+  
+  .spinner-medium {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+  }
+  
+  .spinner-large {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-text {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+</style>
