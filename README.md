@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Authentication App
 
 A full-stack authentication application built with SvelteKit, PostgreSQL, and Drizzle ORM. Features secure database-based session management, user registration, login, and profile management.
@@ -163,3 +164,7 @@ CREATE TABLE sessions (
 ## License
 
 MIT License
+=======
+# auth_app
+SvelteKit authentication app with Google &amp; GitHub OAuth integration, PostgreSQL database, and robust error handling.
+>>>>>>> 8f9611068faccc250566c8c820b79cd3cd6d4d08
